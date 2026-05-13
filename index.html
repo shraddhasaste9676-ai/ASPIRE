@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aaditya COEP's Counselling 4.0 – Free Engineering Counselling</title>
+  <meta name="description" content="Get free expert engineering counselling from Aaditya COEP. Connect with our executive for MHT-CET, JEE and college admission guidance." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            cream: '#FDF8F1',
+          },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+
+    /* Toggle button selected state */
+    .toggle-btn.selected {
+      background-color: #1e3a5f;
+      color: #ffffff;
+      border-color: #1e3a5f;
+      box-shadow: 0 4px 14px rgba(30, 58, 95, 0.35);
+    }
+
+    /* Pulse animation on CTA hover */
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 4px 24px rgba(30, 58, 95, 0.45); }
+      50%       { box-shadow: 0 8px 36px rgba(30, 58, 95, 0.65); }
+    }
+    #cta-btn:hover { animation: pulse-glow 1.2s ease-in-out infinite; }
+
+    /* Smooth transitions for toggle buttons */
+    .toggle-btn { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+    .toggle-btn:hover:not(.selected) {
+      background-color: #eff6ff;
+      border-color: #93c5fd;
+      color: #1e3a5f;
+    }
+
+    /* Input focus ring */
+    .form-input:focus {
+      outline: none;
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    /* Subtle card entrance */
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    #main-card { animation: slideUp 0.55s ease-out both; }
+  </style>
+</head>
+
+<body class="bg-cream min-h-screen flex items-center justify-center px-4 py-10">
+
+  <!-- ─── CARD ─────────────────────────────────────────────────────────────── -->
+  <div id="main-card"
+       class="w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden bg-white">
+
+    <!-- ── HEADER: Blue Gradient ─────────────────────────────────────────── -->
+    <div class="relative px-8 pt-8 pb-10 text-white"
+         style="background: linear-gradient(135deg, #1565C0 0%, #1E88E5 55%, #42A5F5 100%);">
+
+      <!-- Decorative blobs -->
+      <div class="absolute top-0 right-0 w-36 h-36 rounded-full opacity-10"
+           style="background: radial-gradient(circle, #ffffff 0%, transparent 70%); transform: translate(30%, -30%);"></div>
+      <div class="absolute bottom-0 left-0 w-24 h-24 rounded-full opacity-10"
+           style="background: radial-gradient(circle, #ffffff 0%, transparent 70%); transform: translate(-30%, 30%);"></div>
+
+      <!-- Badge -->
+      <span class="inline-block bg-white/20 text-white text-xs font-600 tracking-wider uppercase px-3 py-1 rounded-full mb-4 backdrop-blur-sm border border-white/30">
+        🎓 Free Counselling Session
+      </span>
+
+      <h1 class="text-2xl sm:text-3xl font-extrabold leading-tight tracking-tight">
+        Aaditya Coep's<br />Counselling 4.0
+      </h1>
+      <p class="mt-2 text-sm sm:text-base text-blue-100 leading-relaxed">
+        You will get connected by our executive for<br class="hidden sm:block" />
+        Engineering Counselling.
+      </p>
+
+      <!-- Stats strip -->
+      <div class="mt-6 flex gap-6">
+        <div class="text-center">
+          <p class="text-xl font-bold">5000+</p>
+          <p class="text-xs text-blue-200">Students Helped</p>
+        </div>
+        <div class="w-px bg-white/30"></div>
+        <div class="text-center">
+          <p class="text-xl font-bold">100%</p>
+          <p class="text-xs text-blue-200">Free Service</p>
+        </div>
+        <div class="w-px bg-white/30"></div>
+        <div class="text-center">
+          <p class="text-xl font-bold">4.9★</p>
+          <p class="text-xs text-blue-200">Rating</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── FORM BODY ──────────────────────────────────────────────────────── -->
+    <form id="counselling-form" class="px-6 sm:px-8 py-8 space-y-6">
+
+      <!-- Q1: Are you a Student or Parent? -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">
+          Q1. Are you a Student or Parent?
+          <span class="text-red-500">*</span>
+        </label>
+        <div class="grid grid-cols-2 gap-3" role="group" aria-label="Student or Parent">
+          <button type="button" id="btn-student"
+                  class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+                  data-group="q1" data-value="Student"
+                  onclick="selectToggle(this)">
+            🎒 Student
+          </button>
+          <button type="button" id="btn-parent"
+                  class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+                  data-group="q1" data-value="Parent"
+                  onclick="selectToggle(this)">
+            👨‍👩‍👧 Parent
+          </button>
+        </div>
+        <input type="hidden" id="q1-value" name="role" required />
+      </div>
+
+      <!-- Q2: Full Name -->
+      <div>
+        <label for="full-name" class="block text-sm font-semibold text-gray-700 mb-2">
+          Q2. Full Name <span class="text-red-500">*</span>
+        </label>
+        <input type="text" id="full-name" name="full_name" required
+               placeholder="Enter your full name"
+               class="form-input w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 transition-all duration-200" />
+      </div>
+
+      <!-- Q3: Mobile Number -->
+      <div>
+        <label for="mobile" class="block text-sm font-semibold text-gray-700 mb-2">
+          Q3. Mobile Number <span class="text-red-500">*</span>
+        </label>
+        <div class="relative">
+          <span class="absolute left-4 top-1/2 -translate-y-1/2 text-sm text-gray-500 font-medium select-none">🇮🇳 +91</span>
+          <input type="tel" id="mobile" name="mobile" required
+                 placeholder="10-digit mobile number"
+                 maxlength="10" pattern="[6-9][0-9]{9}"
+                 class="form-input w-full border-2 border-gray-200 rounded-xl pl-16 pr-4 py-3 text-sm text-gray-800 placeholder-gray-400 transition-all duration-200" />
+        </div>
+      </div>
+
+      <!-- Q4: City -->
+      <div>
+        <label for="city" class="block text-sm font-semibold text-gray-700 mb-2">
+          Q4. City <span class="text-red-500">*</span>
+        </label>
+        <input type="text" id="city" name="city" required
+               placeholder="Enter your city"
+               class="form-input w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 transition-all duration-200" />
+      </div>
+
+      <!-- Q5: Online or Offline? -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">
+          Q5. Preferred Mode of Counselling
+          <span class="text-red-500">*</span>
+        </label>
+        <div class="grid grid-cols-2 gap-3" role="group" aria-label="Online or Offline">
+          <button type="button" id="btn-online"
+                  class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+                  data-group="q5" data-value="Online"
+                  onclick="selectToggle(this)">
+            💻 Online
+          </button>
+          <button type="button" id="btn-offline"
+                  class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+                  data-group="q5" data-value="Offline"
+                  onclick="selectToggle(this)">
+            🏫 Offline
+          </button>
+        </div>
+        <input type="hidden" id="q5-value" name="mode" required />
+      </div>
+
+      <!-- Q6: Exam Type -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">
+          Q6. Which exam did you appear for?
+          <span class="text-red-500">*</span>
+        </label>
+        <div class="grid grid-cols-3 gap-3" role="group" aria-label="Exam type">
+          <button type="button" id="btn-mhtcet"
+                  class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+                  data-group="q6" data-value="MHT-CET"
+                  onclick="selectToggle(this)">
+            MHT-CET
+          </button>
+          <button type="button" id="btn-jee"
+                  class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+                  data-group="q6" data-value="JEE"
+                  onclick="selectToggle(this)">
+            JEE
+          </button>
+          <button type="button" id="btn-both"
+                  class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+                  data-group="q6" data-value="Both"
+                  onclick="selectToggle(this)">
+            BOTH
+          </button>
+        </div>
+        <input type="hidden" id="q6-value" name="exam" required />
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-dashed border-gray-200"></div>
+
+      <!-- CTA Button -->
+      <button type="submit" id="cta-btn"
+              class="w-full bg-[#1e3a5f] hover:bg-[#162d4a] text-white font-bold text-base py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2">
+        <span>Get Free Counselling Call</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd"
+                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"/>
+        </svg>
+      </button>
+
+      <!-- Trust note -->
+      <p class="text-center text-xs text-gray-400">
+        🔒 Your information is 100% private and secure.
+      </p>
+
+    </form>
+
+    <!-- ── SUCCESS STATE (hidden by default) ──────────────────────────────── -->
+    <div id="success-state" class="hidden px-8 py-12 text-center">
+      <div class="text-6xl mb-4">🎉</div>
+      <h2 class="text-2xl font-extrabold text-gray-800 mb-2">You're all set!</h2>
+      <p class="text-gray-500 text-sm leading-relaxed">
+        Our counselling executive will call you shortly.<br />
+        Please keep your phone handy.
+      </p>
+    </div>
+
+  </div><!-- /CARD -->
+
+  <!-- ─── FOOTER ──────────────────────────────────────────────────────────── -->
+  <p class="fixed bottom-3 left-0 right-0 text-center text-xs text-gray-400">
+    © 2026 Aaditya COEP's Counselling. All rights reserved.
+  </p>
+
+  <!-- ─── SCRIPT ──────────────────────────────────────────────────────────── -->
+  <script>
+    /** Toggle selection within a radio-button group */
+    function selectToggle(btn) {
+      const group = btn.dataset.group;
+      // Deselect all siblings in same group
+      document.querySelectorAll(`[data-group="${group}"]`).forEach(b => b.classList.remove('selected'));
+      // Select clicked button
+      btn.classList.add('selected');
+      // Update hidden input
+      const inputId = group + '-value';
+      const hiddenInput = document.getElementById(inputId);
+      if (hiddenInput) hiddenInput.value = btn.dataset.value;
+    }
+
+    /** Validate all hidden toggle inputs are filled */
+    function validateToggles() {
+      const groups = ['q1', 'q5', 'q6'];
+      for (const g of groups) {
+        const val = document.getElementById(g + '-value').value;
+        if (!val) {
+          alert('Please answer all questions before submitting.');
+          return false;
+        }
+      }
+      return true;
+    }
+
+    /** Mobile number validation */
+    function validateMobile(num) {
+      return /^[6-9][0-9]{9}$/.test(num);
+    }
+
+    /** Form submission */
+    document.getElementById('counselling-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      if (!validateToggles()) return;
+
+      const mobile = document.getElementById('mobile').value.trim();
+      if (!validateMobile(mobile)) {
+        alert('Please enter a valid 10-digit Indian mobile number.');
+        document.getElementById('mobile').focus();
+        return;
+      }
+
+      // Collect data (plug in your webhook URL here)
+      const payload = {
+        role:      document.getElementById('q1-value').value,
+        full_name: document.getElementById('full-name').value.trim(),
+        mobile:    '+91' + mobile,
+        city:      document.getElementById('city').value.trim(),
+        mode:      document.getElementById('q5-value').value,
+        exam:      document.getElementById('q6-value').value,
+        submitted_at: new Date().toISOString(),
+      };
+
+      console.log('Form payload:', payload);
+
+      // Show success state
+      document.getElementById('counselling-form').classList.add('hidden');
+      document.getElementById('success-state').classList.remove('hidden');
+    });
+
+    /** Only allow digits in mobile field */
+    document.getElementById('mobile').addEventListener('input', function() {
+      this.value = this.value.replace(/\D/g, '').slice(0, 10);
+    });
+  </script>
+</body>
+</html>
