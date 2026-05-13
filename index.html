@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aaditya COEP's Counselling 4.0 – Free Engineering Counselling</title>
-  <meta name="description" content="Get free expert engineering counselling from Aaditya COEP. Connect with our executive for MHT-CET, JEE and college admission guidance." />
+  <title>Aspire Edtech Consultancy Pune – Free Engineering Counselling</title>
+  <meta name="description"
+    content="Get free expert engineering counselling from Aspire Edtech Consultancy Pune. Connect with our executive for MHT-CET, JEE and college admission guidance." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet" />
   <script>
     tailwind.config = {
       theme: {
@@ -24,7 +27,9 @@
     };
   </script>
   <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
 
     /* Toggle button selected state */
     .toggle-btn.selected {
@@ -36,13 +41,26 @@
 
     /* Pulse animation on CTA hover */
     @keyframes pulse-glow {
-      0%, 100% { box-shadow: 0 4px 24px rgba(30, 58, 95, 0.45); }
-      50%       { box-shadow: 0 8px 36px rgba(30, 58, 95, 0.65); }
+
+      0%,
+      100% {
+        box-shadow: 0 4px 24px rgba(30, 58, 95, 0.45);
+      }
+
+      50% {
+        box-shadow: 0 8px 36px rgba(30, 58, 95, 0.65);
+      }
     }
-    #cta-btn:hover { animation: pulse-glow 1.2s ease-in-out infinite; }
+
+    #cta-btn:hover {
+      animation: pulse-glow 1.2s ease-in-out infinite;
+    }
 
     /* Smooth transitions for toggle buttons */
-    .toggle-btn { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+    .toggle-btn {
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
     .toggle-btn:hover:not(.selected) {
       background-color: #eff6ff;
       border-color: #93c5fd;
@@ -58,36 +76,49 @@
 
     /* Subtle card entrance */
     @keyframes slideUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to   { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(24px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    #main-card { animation: slideUp 0.55s ease-out both; }
+
+    #main-card {
+      animation: slideUp 0.55s ease-out both;
+    }
   </style>
 </head>
 
 <body class="bg-cream min-h-screen flex items-center justify-center px-4 py-10">
 
   <!-- ─── CARD ─────────────────────────────────────────────────────────────── -->
-  <div id="main-card"
-       class="w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden bg-white">
+  <div id="main-card" class="w-full max-w-lg rounded-3xl shadow-2xl overflow-hidden bg-white">
 
     <!-- ── HEADER: Blue Gradient ─────────────────────────────────────────── -->
     <div class="relative px-8 pt-8 pb-10 text-white"
-         style="background: linear-gradient(135deg, #1565C0 0%, #1E88E5 55%, #42A5F5 100%);">
+      style="background: linear-gradient(135deg, #1565C0 0%, #1E88E5 55%, #42A5F5 100%);">
 
       <!-- Decorative blobs -->
       <div class="absolute top-0 right-0 w-36 h-36 rounded-full opacity-10"
-           style="background: radial-gradient(circle, #ffffff 0%, transparent 70%); transform: translate(30%, -30%);"></div>
+        style="background: radial-gradient(circle, #ffffff 0%, transparent 70%); transform: translate(30%, -30%);">
+      </div>
       <div class="absolute bottom-0 left-0 w-24 h-24 rounded-full opacity-10"
-           style="background: radial-gradient(circle, #ffffff 0%, transparent 70%); transform: translate(-30%, 30%);"></div>
+        style="background: radial-gradient(circle, #ffffff 0%, transparent 70%); transform: translate(-30%, 30%);">
+      </div>
 
       <!-- Badge -->
-      <span class="inline-block bg-white/20 text-white text-xs font-600 tracking-wider uppercase px-3 py-1 rounded-full mb-4 backdrop-blur-sm border border-white/30">
+      <span
+        class="inline-block bg-white/20 text-white text-xs font-600 tracking-wider uppercase px-3 py-1 rounded-full mb-4 backdrop-blur-sm border border-white/30">
         🎓 Free Counselling Session
       </span>
 
-      <h1 class="text-2xl sm:text-3xl font-extrabold leading-tight tracking-tight">
-        Aaditya Coep's<br />Counselling 4.0
+      <!-- Rebranded Heading -->
+      <h1 class="text-3xl sm:text-4xl font-extrabold leading-tight tracking-tight">
+        Aspire Edtech<br />Consultancy Pune
       </h1>
       <p class="mt-2 text-sm sm:text-base text-blue-100 leading-relaxed">
         You will get connected by our executive for<br class="hidden sm:block" />
@@ -116,113 +147,145 @@
     <!-- ── FORM BODY ──────────────────────────────────────────────────────── -->
     <form id="counselling-form" class="px-6 sm:px-8 py-8 space-y-6">
 
-      <!-- Q1: Are you a Student or Parent? -->
-      <div>
-        <label class="block text-sm font-semibold text-gray-700 mb-2">
-          Q1. Are you a Student or Parent?
-          <span class="text-red-500">*</span>
-        </label>
-        <div class="grid grid-cols-2 gap-3" role="group" aria-label="Student or Parent">
-          <button type="button" id="btn-student"
-                  class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
-                  data-group="q1" data-value="Student"
-                  onclick="selectToggle(this)">
-            🎒 Student
-          </button>
-          <button type="button" id="btn-parent"
-                  class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
-                  data-group="q1" data-value="Parent"
-                  onclick="selectToggle(this)">
-            👨‍👩‍👧 Parent
-          </button>
-        </div>
-        <input type="hidden" id="q1-value" name="role" required />
-      </div>
 
-      <!-- Q2: Full Name -->
+      <!-- Q1: Full Name -->
       <div>
         <label for="full-name" class="block text-sm font-semibold text-gray-700 mb-2">
-          Q2. Full Name <span class="text-red-500">*</span>
+          Q1. Full Name <span class="text-red-500">*</span>
         </label>
-        <input type="text" id="full-name" name="full_name" required
-               placeholder="Enter your full name"
-               class="form-input w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 transition-all duration-200" />
+        <input type="text" id="full-name" name="full_name" required placeholder="Enter your full name"
+          class="form-input w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 transition-all duration-200" />
       </div>
 
-      <!-- Q3: Mobile Number -->
+      <!-- Q2: Mobile Number -->
       <div>
         <label for="mobile" class="block text-sm font-semibold text-gray-700 mb-2">
-          Q3. Mobile Number <span class="text-red-500">*</span>
+          Q2. Mobile Number <span class="text-red-500">*</span>
         </label>
         <div class="relative">
-          <span class="absolute left-4 top-1/2 -translate-y-1/2 text-sm text-gray-500 font-medium select-none">🇮🇳 +91</span>
-          <input type="tel" id="mobile" name="mobile" required
-                 placeholder="10-digit mobile number"
-                 maxlength="10" pattern="[6-9][0-9]{9}"
-                 class="form-input w-full border-2 border-gray-200 rounded-xl pl-16 pr-4 py-3 text-sm text-gray-800 placeholder-gray-400 transition-all duration-200" />
+          <span class="absolute left-4 top-1/2 -translate-y-1/2 text-sm text-gray-500 font-medium select-none">🇮🇳
+            +91</span>
+          <input type="tel" id="mobile" name="mobile" required placeholder="10-digit mobile number" maxlength="10"
+            pattern="[6-9][0-9]{9}"
+            class="form-input w-full border-2 border-gray-200 rounded-xl pl-16 pr-4 py-3 text-sm text-gray-800 placeholder-gray-400 transition-all duration-200" />
         </div>
       </div>
 
-      <!-- Q4: City -->
+      <!-- Q3: City -->
       <div>
         <label for="city" class="block text-sm font-semibold text-gray-700 mb-2">
-          Q4. City <span class="text-red-500">*</span>
+          Q3. City <span class="text-red-500">*</span>
         </label>
-        <input type="text" id="city" name="city" required
-               placeholder="Enter your city"
-               class="form-input w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 transition-all duration-200" />
+        <input type="text" id="city" name="city" required placeholder="Enter your city"
+          class="form-input w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 transition-all duration-200" />
       </div>
 
-      <!-- Q5: Online or Offline? -->
-      <div>
-        <label class="block text-sm font-semibold text-gray-700 mb-2">
-          Q5. Preferred Mode of Counselling
-          <span class="text-red-500">*</span>
-        </label>
-        <div class="grid grid-cols-2 gap-3" role="group" aria-label="Online or Offline">
-          <button type="button" id="btn-online"
-                  class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
-                  data-group="q5" data-value="Online"
-                  onclick="selectToggle(this)">
-            💻 Online
-          </button>
-          <button type="button" id="btn-offline"
-                  class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
-                  data-group="q5" data-value="Offline"
-                  onclick="selectToggle(this)">
-            🏫 Offline
-          </button>
-        </div>
-        <input type="hidden" id="q5-value" name="mode" required />
-      </div>
 
-      <!-- Q6: Exam Type -->
+      <!-- Q4: Exam Type -->
       <div>
         <label class="block text-sm font-semibold text-gray-700 mb-2">
-          Q6. Which exam did you appear for?
+          Q4. Which exam did you appear for?
           <span class="text-red-500">*</span>
         </label>
         <div class="grid grid-cols-3 gap-3" role="group" aria-label="Exam type">
           <button type="button" id="btn-mhtcet"
-                  class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
-                  data-group="q6" data-value="MHT-CET"
-                  onclick="selectToggle(this)">
+            class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+            data-group="q6" data-value="MHT-CET" onclick="selectToggle(this)">
             MHT-CET
           </button>
           <button type="button" id="btn-jee"
-                  class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
-                  data-group="q6" data-value="JEE"
-                  onclick="selectToggle(this)">
+            class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+            data-group="q6" data-value="JEE" onclick="selectToggle(this)">
             JEE
           </button>
           <button type="button" id="btn-both"
-                  class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
-                  data-group="q6" data-value="Both"
-                  onclick="selectToggle(this)">
+            class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+            data-group="q6" data-value="Both" onclick="selectToggle(this)">
             BOTH
           </button>
         </div>
         <input type="hidden" id="q6-value" name="exam" required />
+      </div>
+
+      <!-- Q5: Annual Budget -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">
+          Q5. What is your approximate annual budget for college fees?
+          <span class="text-red-500">*</span>
+        </label>
+        <div class="grid grid-cols-2 gap-3" role="group" aria-label="Budget range">
+          <button type="button"
+            class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+            data-group="q7" data-value="0-3 Lakhs" onclick="selectToggle(this)">
+            ₹0 - ₹3 Lakhs
+          </button>
+          <button type="button"
+            class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+            data-group="q7" data-value="3-5 Lakhs" onclick="selectToggle(this)">
+            ₹3L - ₹5 Lakhs
+          </button>
+          <button type="button"
+            class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+            data-group="q7" data-value="5-10 Lakhs" onclick="selectToggle(this)">
+            ₹5L - ₹10 Lakhs
+          </button>
+          <button type="button"
+            class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+            data-group="q7" data-value="15+ Lakhs" onclick="selectToggle(this)">
+            ₹15 Lakhs +
+          </button>
+        </div>
+        <input type="hidden" id="q7-value" name="budget" required />
+      </div>
+
+      <!-- Q6: Interested College -->
+      <div>
+        <label for="interested-college" class="block text-sm font-semibold text-gray-700 mb-2">
+          Q6. Interested College <span class="text-red-500">*</span>
+        </label>
+        <input type="text" id="interested-college" name="interested_college" required
+          placeholder="e.g. COEP, VJTI, PICT..."
+          class="form-input w-full border-2 border-gray-200 rounded-xl px-4 py-3 text-sm text-gray-800 placeholder-gray-400 transition-all duration-200" />
+      </div>
+
+      <!-- Q7: Interested Branch -->
+      <div>
+        <label class="block text-sm font-semibold text-gray-700 mb-2">
+          Q7. Interested Branch <span class="text-red-500">*</span>
+        </label>
+        <div class="grid grid-cols-2 gap-3" role="group" aria-label="Interested Branch">
+          <button type="button"
+            class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+            data-group="q9" data-value="Computer Engineering" onclick="selectToggle(this)">
+            💻 Computer Engg
+          </button>
+          <button type="button"
+            class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+            data-group="q9" data-value="IT" onclick="selectToggle(this)">
+            🖥️ IT
+          </button>
+          <button type="button"
+            class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+            data-group="q9" data-value="Mechanical" onclick="selectToggle(this)">
+            ⚙️ Mechanical
+          </button>
+          <button type="button"
+            class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+            data-group="q9" data-value="Civil" onclick="selectToggle(this)">
+            🏗️ Civil
+          </button>
+          <button type="button"
+            class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+            data-group="q9" data-value="Electronics" onclick="selectToggle(this)">
+            ⚡ Electronics
+          </button>
+          <button type="button"
+            class="toggle-btn border-2 border-gray-200 rounded-xl py-3 text-sm font-semibold text-gray-600"
+            data-group="q9" data-value="Other" onclick="selectToggle(this)">
+            📚 Other
+          </button>
+        </div>
+        <input type="hidden" id="q9-value" name="interested_branch" required />
       </div>
 
       <!-- Divider -->
@@ -230,12 +293,13 @@
 
       <!-- CTA Button -->
       <button type="submit" id="cta-btn"
-              class="w-full bg-[#1e3a5f] hover:bg-[#162d4a] text-white font-bold text-base py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2">
+        class="w-full bg-[#1e3a5f] hover:bg-[#162d4a] text-white font-bold text-base py-4 rounded-2xl transition-all duration-300 flex items-center justify-center gap-2">
         <span>Get Free Counselling Call</span>
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"
+          aria-hidden="true">
           <path fill-rule="evenodd"
-                d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
-                clip-rule="evenodd"/>
+            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+            clip-rule="evenodd" />
         </svg>
       </button>
 
@@ -260,7 +324,7 @@
 
   <!-- ─── FOOTER ──────────────────────────────────────────────────────────── -->
   <p class="fixed bottom-3 left-0 right-0 text-center text-xs text-gray-400">
-    © 2026 Aaditya COEP's Counselling. All rights reserved.
+    © 2026 Aspire Edtech Consultancy Pune. All rights reserved.
   </p>
 
   <!-- ─── SCRIPT ──────────────────────────────────────────────────────────── -->
@@ -280,7 +344,7 @@
 
     /** Validate all hidden toggle inputs are filled */
     function validateToggles() {
-      const groups = ['q1', 'q5', 'q6'];
+      const groups = ['q6', 'q7', 'q9'];
       for (const g of groups) {
         const val = document.getElementById(g + '-value').value;
         if (!val) {
@@ -297,7 +361,7 @@
     }
 
     /** Form submission */
-    document.getElementById('counselling-form').addEventListener('submit', function(e) {
+    document.getElementById('counselling-form').addEventListener('submit', function (e) {
       e.preventDefault();
 
       if (!validateToggles()) return;
@@ -311,26 +375,51 @@
 
       // Collect data (plug in your webhook URL here)
       const payload = {
-        role:      document.getElementById('q1-value').value,
         full_name: document.getElementById('full-name').value.trim(),
-        mobile:    '+91' + mobile,
-        city:      document.getElementById('city').value.trim(),
-        mode:      document.getElementById('q5-value').value,
-        exam:      document.getElementById('q6-value').value,
+        mobile: '+91' + mobile,
+        city: document.getElementById('city').value.trim(),
+        exam: document.getElementById('q6-value').value,
+        budget: document.getElementById('q7-value').value,
+        college: document.getElementById('interested-college').value.trim(),
+        branch: document.getElementById('q9-value').value,
         submitted_at: new Date().toISOString(),
       };
 
-      console.log('Form payload:', payload);
+      // 🚀 Send data to Google Sheets
+      // Replace 'YOUR_WEB_APP_URL' with the URL you get after deploying the Apps Script
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwRpuQvhyFXbNnyk1CHi9fYKKAalVeX05UTYV5nn1uGyFAARgHYcJwInQEZnab9-znR/exec';
 
-      // Show success state
-      document.getElementById('counselling-form').classList.add('hidden');
-      document.getElementById('success-state').classList.remove('hidden');
+      // Show loading state on button
+      const btn = document.getElementById('cta-btn');
+      const btnText = btn.querySelector('span');
+      const originalText = btnText.innerText;
+      btnText.innerText = 'Submitting...';
+      btn.disabled = true;
+
+      fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', // Important: Google Apps Script redirects don't support CORS
+        cache: 'no-cache',
+        body: JSON.stringify(payload)
+      })
+        .then(() => {
+          // Show success state
+          document.getElementById('counselling-form').classList.add('hidden');
+          document.getElementById('success-state').classList.remove('hidden');
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          alert('Something went wrong. Please try again.');
+          btnText.innerText = originalText;
+          btn.disabled = false;
+        });
     });
 
     /** Only allow digits in mobile field */
-    document.getElementById('mobile').addEventListener('input', function() {
+    document.getElementById('mobile').addEventListener('input', function () {
       this.value = this.value.replace(/\D/g, '').slice(0, 10);
     });
   </script>
 </body>
+
 </html>
